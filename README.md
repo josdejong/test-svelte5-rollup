@@ -22,3 +22,9 @@ Steps to reproduce:
       Test Test.svelte:2
       <anonymous> test.html:32
     ```
+
+To verify that the rollup bundling works with Svelte 4:
+
+5. Open `package.json` and change the version of `"svelte"` from `"5.0.0-next.205"` to `"4.2.18""`.
+6. Run `npm install`
+7. Execute steps (3) and (4) again: `npm run build`, then open `test.html` in your browser. Now, you'll see the "hello world" message and no errors in the browser console.
