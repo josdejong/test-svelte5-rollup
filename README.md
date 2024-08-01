@@ -9,7 +9,7 @@ Relevant files:
 - `rollup.config.js`
 - `test.html`
 
-Steps to reproduce:
+Steps to reproduce the issue with Svelte 5:
 
 1. Install dependencies via `npm install --force`
 2. Run in develop mode to verify that the Svelte app itself works: `npm run dev`, then open your browser and check that you see "Test Component message: Hello world"
@@ -25,6 +25,6 @@ Steps to reproduce:
 
 To verify that the rollup bundling works with Svelte 4:
 
-5. Open `package.json` and change the version of `"svelte"` from `"5.0.0-next.205"` to `"4.2.18""`.
+5. Open `package.json` and change the version of `"svelte"` from `"5.0.0-next.205"` to `"4.2.18"`.
 6. Run `npm install`
 7. Execute steps (3) and (4) again: `npm run build`, then open `test.html` in your browser. Now, you'll see the "hello world" message and no errors in the browser console.
