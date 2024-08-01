@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>JSON Editor (Svelte)</title>
+
+    <style>
+      #testEditorContainer {
+        width: 800px;
+        height: 500px;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>(check the developer console for errors...)</p>
+
+    <div id="testEditorContainer"></div>
+
+    <script type="module">
+      import { Test } from './dist/bundle.js'
+
+      console.log('Test', Test.toString())
+
+      const target = document.getElementById('testEditorContainer')
+      const props = {
+        message: 'Another hello world!'
+      }
+      const testEditor = new Test({ target, props })
+    </script>
+  </body>
+</html>

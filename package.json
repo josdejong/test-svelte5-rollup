@@ -1,0 +1,25 @@
+{
+	"name": "test-svelte5-rollup",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "rollup --config rollup.config.js",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "15.2.3",
+		"@sveltejs/adapter-auto": "3.2.2",
+		"@sveltejs/kit": "2.5.19",
+		"@sveltejs/vite-plugin-svelte": "3.1.1",
+		"rollup": "4.19.2",
+		"rollup-plugin-svelte": "7.2.2",
+		"svelte": "5.0.0-next.205",
+		"svelte-check": "3.8.5",
+		"typescript": "5.5.4",
+		"vite": "5.3.5"
+	},
+	"type": "module"
+}
