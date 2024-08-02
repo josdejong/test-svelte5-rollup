@@ -21,7 +21,7 @@
     <div id="testEditorContainer"></div>
 
     <script type="module">
-      import { Test } from './dist/bundle.js'
+      import { Test, mount } from './dist/bundle.js'
 
       console.log('Test', Test.toString())
 
@@ -29,7 +29,12 @@
       const props = {
         message: 'Another hello world!'
       }
-      const testEditor = new Test({ target, props })
+
+      // Components are no longer classes
+      // https://svelte-5-preview.vercel.app/docs/breaking-changes#components-are-no-longer-classes
+      // Svelte 4 syntax: const testEditor = new Test({ target, props })
+      const testEditor = mount(Test, { target, props })
+      // to destroy: unmount(testEditor)
     </script>
   </body>
 </html>

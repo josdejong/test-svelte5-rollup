@@ -1,5 +1,6 @@
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
+import postcss from 'rollup-plugin-postcss'
 
 export default {
   input: 'src/lib/index.ts',
@@ -12,7 +13,11 @@ export default {
   ],
   plugins: [
     svelte({
-      emitCss: false
+      emitCss: true
+    }),
+
+    postcss({
+      plugins: []
     }),
 
     resolve({
